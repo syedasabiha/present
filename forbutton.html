@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style type="text/css">
+            #hover_el
+            {   
+            margin-top: 20px;
+            padding: 10px;
+            }   
+            #hover_el:hover
+            {   
+                border: 0px dashed blue;
+            }
+        </style>
+        <script type='text/javascript'>
+            window.onload = function() {check_for_hover()};
+            function check_for_hover() {
+                var hover_element = document.getElementById('hover_el');
+                var hover_status = (getStyle(hover_element, 'border-style') === 'dashed') ? true : false;
+                document.getElementById('display').innerHTML = 'you are' + (hover_status ? '' : ' not') + ' hovering';
+                setTimeout(check_for_hover, 1000);
+            };
+            function getStyle(oElm, strCssRule) {
+                var strValue = "";
+                if(document.defaultView && document.defaultView.getComputedStyle) {
+                    strValue = document.defaultView.getComputedStyle(oElm, "").getPropertyValue(strCssRule);
+                }
+                else if(oElm.currentStyle) {
+                    strCssRule = strCssRule.replace(/\-(\w)/g, function (strMatch, p1) {
+                        return p1.toUpperCase();
+                    });
+                    strValue = oElm.currentStyle[strCssRule];
+                }
+                return strValue;
+            };
+        </script>
+    </head>
+    <body>
+        <div id='hover_el'>
+            <button class="btn btn-primary" type="button">contact us</button>
+        </div>
+        <div id='display'>
+            <button class="btn btn-primary" type="button">contact us</button>
+            <button class="btn btn-primary" type="button">contact us</button>
+            <button class="btn btn-primary" type="button">contact us</button>
+            <button class="btn btn-primary" type="button">contact us</button>
+        </div>
+    </body>
+</html>

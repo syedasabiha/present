@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Presentiva</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/demo-styles.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'> 
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" ></script> 
+    </head>
+    <body>
+        <div class="main">
+            <div class="text-right"><img src="./images/Cross.png" class="m-5 img-fluid pointer"></div>
+            <div class="container-main">
+                <div class="card cardPadding">
+                    <div class="d-flex" id="mainContent">
+                        <div>
+                            <div class="text-center">
+                                <img src="./images/Presentiva Logo.png" width="291px" height="49px" class="img-fluid" onclick="close()">
+                                <p class="demoText1 mt-4 mx-auto">Welcome to Presentiva scheduling page. Please follow the instructions to schedule a call with us.</p>
+                                <hr class="hrTag mt-4">
+                                <h6 class="demoText2 text-left">Presentiva App Demo</h6>
+                                <div>
+                                    <p class="demoText1 demoText3 text-left"><span><img src="./images/Clock Icon.svg" class="img-fluid"></span><span class="ml-2 my-auto">30 Mins</span></p>
+                                </div>
+                                <p class="demoText1 mt-3 text-left">Web Conference details will be shared upon confirmation.</p>
+                                <div class="text-right"><button class="demoBtn pointer text-white pl-5 pr-5 pt-2 pb-2" id="mainNext" onclick="enableCalendar()">Next</button></div>
+                            </div>
+                        </div>
+                        <div class="ml-5" id="calendarSection" style="display: none;">
+                            <div class="text-center">
+                                <p class="demoText1 demoText4 mt-4 text-left mb-2">Select Date & Time</p>
+                                <p class="demoText1 text-left mb-4">Indian Standard Time (6:45 PM)</p>
+                                <div id="date"></div>
+                            </div>
+                        </div>
+                        <div id="timeSection" style="display: none;">
+                            <div class="text-center">
+                                <div class="d-flex mt-4 ml-5">
+                                    <div>
+                                        <div id="row1"></div>
+                                    </div>
+                                    <div class="ml-4">
+                                        <div id="row2"></div>
+                                    </div>
+                                </div>
+                                <button class="demoBtn pointer text-white mt-3 pl-5 pr-5 pt-2 pb-2" onclick="showForm()">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="formContent" style="display: none;">
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8 text-center">
+                                <img src="./images/Presentiva Logo.png" class="img-fluid" width="500px">
+                                <hr class="hrTag mt-4">
+                                <form class="mt-5">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control inputForm" name="name" placeholder="Name" autocomplete="off" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control inputForm" name="email" placeholder="Email" autocomplete="off" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="number" class="form-control inputForm" name="number" placeholder="Contact Number" autocomplete="off" required>
+                                    </div>
+                                    <div class="text-right">
+                                        <button class="demoBtn pointer text-white mt-3 pl-5 pr-5 pt-2 pb-2" onclick="submitDetails()">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/demo.js"></script>
+    </body>
+</html>
